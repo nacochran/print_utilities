@@ -1,3 +1,7 @@
+let isDragging = false;
+let startY;
+let startHeight;
+
 // Setup pring dialog
 function setup_print_dialog(text) {
   let printDialog = document.createElement("div");
@@ -16,9 +20,7 @@ function setup_print_dialog(text) {
     printDialog.remove();
   });
 
-  let isDragging = false;
-  let startY;
-  let startHeight;
+  let dragHandle = document.getElementsByClassName("drag-handle")[0];
 
   // Start dragging
   dragHandle.addEventListener('mousedown', (event) => {
@@ -59,4 +61,3 @@ function println(text) {
     list.appendChild(newItem);
   }
 }
-
